@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Day-12</title>
+    <style>
+
+        .container{
+            height: 20em;
+            width: 35em;
+            border: 4px solid;
+            background-color: whitesmoke;
+            text-align: center;
+            transform: translate(65%,3%);
+        }
+
+        .container2{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            transform: translate(0,500px);
+            margin-left: 15%;
+        }
+
+        button{
+            height: 4em;
+            width: 45%;
+            background-color: whitesmoke;
+            border: 4px solid;
+            font-size: medium;
+            font-weight: 700;
+        }
+
+        .image1{
+            height: 73%;
+            width: 87%; 
+            margin-top: -2%;
+            margin-left: -2%;
+            margin-right: -2%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container2">
+    <button id="btn1">HTML</button>
+    <button id="btn2">CSS</button>
+    <button id="btn3">JavaScript</button>
+    </div> 
+
+    <script>
+        
+        var x = document.createElement("div");
+        x.innerHTML="<h1>"+"Front-End Technologies"+"</h1>";
+        x.classList.add("container");
+        document.body.append(x);
+        console.log(x);
+        
+        var y = document.createElement("img");
+        y.setAttribute("src","frontend.jpg");
+        y.setAttribute("id","picture")
+        y.classList.add("image1");
+        x.append(y);  
+        console.log(y);
+
+        var z = document.createElement("div");
+        z.innerHTML="<h1>"+"Click below buttons to get the images"+"</h1>"
+        z.style.textAlign="center";
+        document.body.append(z);
+        console.log(z);
+
+        let a = document.getElementById("btn1");
+        a.addEventListener("click",function (){
+            picture.src="html.jpg";
+            picture.classList.add("image1");
+        })
+        console.log(a);
+
+        let b = document.getElementById("btn2");
+        b.addEventListener("click",function (){
+            picture.src="css.jpg"
+            picture.classList.add("image1");
+        })
+        console.log(b);
+
+        let c = document.getElementById("btn3");
+        c.addEventListener("click",function (){
+            picture.src="js.jpg";
+            picture.classList.add("image1");
+        })
+        console.log(a);
+
+    </script>
+    
+</body>
+</html>

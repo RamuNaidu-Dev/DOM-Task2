@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>set&get attribute</title>
+
+    <style>
+        /* .el1{
+            background-color: yellowgreen;
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+        }
+        
+        .el2{
+            background-color: blue;
+            width: 500px;
+            height: 300px;
+            border: 1px solid;
+            text-align: center;
+
+        } */
+
+        .hide{
+            display: none;
+        }
+
+        .show{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <img src="image1.jpg" alt="image" id="1image">
+
+    <button onclick="toggle()">Toggle</button>
+
+    <img src="image2.jpg" alt="image" id="2image">
+
+    <button onclick="hide()">hide</button>
+    <button onclick="show()">show</button>
+
+    <!-- <div id="el1">Content is seen here</div>
+    <div id="el2">Content is disappeared</div>
+    <div id="el3">Content will be written here</div> -->
+
+    
+
+    <script>
+
+        // getAttribute ---> fetches the attribute's value.
+        // let a = document.querySelectorAll("img");
+        // console.log(a);
+        // console.log(a[1].getAttribute("src"));
+
+        // let x =  document.querySelectorAll("img");
+        // console.log(x);
+        // console.log(x[1].getAttribute("alt"));
+
+        // create & append an img tag element with setAttribute.
+        // let b = document.createElement("img");
+        // b.setAttribute("src","image1.jpg");
+        // document.body.append(b);
+        // console.log(b);
+        
+        // let c = document.createElement("img");
+        // c.setAttribute("src","image2.jpg");
+        // c.setAttribute("alt","image broken");
+        // document.body.append(c);
+        // console.log(c);
+        
+        // let d = document.createElement("div");
+        // d.setAttribute("class","container");
+        // d.innerHTML="<h1>"+"Some Content"+"</h1>";
+        // document.body.append(d);
+        // console.log(d);
+        
+        // let e = document.createElement("div");
+        // e.classList.add("el1")
+        // e.innerHTML="<h1>"+"Some Content"+"</h1>";
+        // e.style.textAlign="center";
+        // document.body.append(e);
+        // console.log(e);
+
+        // let f = document.createElement("div");
+        // f.classList.add("el2")
+        // f.classList.add("el3")
+        // f.classList.add("el4")
+        // f.innerHTML="<h1>"+"Some  new Content"+"</h1>";
+        // document.body.append(f);
+        // console.log(f);
+
+        // f.classList.remove("el3");
+
+
+        let g = document.getElementById("2image");
+
+        function hide(){
+            g.classList.add("hide");
+            g.classList.remove("show");
+        }
+
+        function show(){
+            g.classList.add("show");
+            // g.classList.remove("hide");
+        }
+
+
+        let h=document.getElementById("1image");
+        function toggle(){
+            h.classList.toggle("hide");
+        }
+
+
+        
+        
+        
+        
+        
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
